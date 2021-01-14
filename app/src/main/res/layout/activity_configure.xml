@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/webswitcher_background"
+    tools:context="com.webswitcherPro.activity.ConfigureActivity">
+
+
+    <TextView
+        android:id="@+id/nicknameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nicknameInput"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nicknameInput"
+        android:layout_marginTop="67dp"
+        android:text="@string/nickname"
+        android:textColor="@color/ws_background_white_clr"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nicknameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/nicknameLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/ws_background_white_clr"
+        android:ems="13"
+        android:hint="@string/choose_a_nickname"
+        android:inputType="textPersonName"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        tools:ignore="RtlSymmetry" />
+
+
+    <TextView
+        android:id="@+id/incomingLangLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nicknameInput"
+        android:layout_alignStart="@+id/nicknameInput"
+        android:layout_below="@+id/nicknameInput"
+        android:layout_marginTop="30dp"
+        android:text="@string/listening_language"
+        android:textColor="@color/ws_background_white_clr"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/incomingLangInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/nicknameInput"
+        android:layout_alignLeft="@+id/nicknameInput"
+        android:layout_alignRight="@+id/nicknameInput"
+        android:layout_alignStart="@+id/nicknameInput"
+        android:layout_below="@+id/incomingLangLabel"
+        android:textColor="#4F4F4F"
+        style="@style/spinner_style"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/outgoingLangLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/incomingLangInput"
+        android:layout_alignStart="@+id/incomingLangInput"
+        android:layout_below="@+id/incomingLangInput"
+        android:layout_marginTop="30dp"
+        android:text="@string/spoken_language"
+        android:textColor="@color/ws_background_white_clr"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/outgoingLangInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/incomingLangInput"
+        android:layout_alignLeft="@+id/outgoingLangLabel"
+        android:layout_alignRight="@+id/incomingLangInput"
+        android:layout_alignStart="@+id/outgoingLangLabel"
+        android:layout_below="@+id/outgoingLangLabel"
+        android:textColor="#0000FF"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/outgoingLangInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:background="@color/ws_orange"
+        android:ems="15"
+        android:onClick="start_meeting"
+        android:text="@string/start_meeting"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+

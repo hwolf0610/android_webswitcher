@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ws_background_black_clr"
+    android:orientation="vertical"
+    tools:context="com.webswitcherPro.activity.MeetingActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="285dp"
+        android:layout_height="72dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/container_right_margin"
+        android:contentDescription="@string/webswitcher_text_title"
+        app:srcCompat="@drawable/ws_logo" />
+
+    <ImageButton
+        android:id="@+id/microphoneButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:layout_weight="100"
+        android:adjustViewBounds="true"
+        android:background="@drawable/microphone_off"
+        android:checked="true"
+        android:contentDescription="@string/microphone_text"
+        android:onClick="microphone_click"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:tint="#1F1F1F"
+        android:visibility="invisible"
+        app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+    <ProgressBar
+        android:id="@+id/publisher_volume"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignLeft="@+id/logoutBtn"
+        android:layout_alignRight="@+id/logoutBtn"
+        android:layout_alignStart="@id/imageView"
+        android:layout_below="@+id/langOutLabelText"
+        android:layout_marginTop="16dp"
+        android:animationResolution="@android:integer/config_longAnimTime"
+        android:progressTint="@color/ws_background_green_clr"
+        android:scaleY="1"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/subscriber_volume"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/listeningSpinner"
+        android:layout_alignLeft="@+id/listeningSpinner"
+        android:layout_alignRight="@+id/listeningSpinner"
+        android:layout_alignStart="@+id/listeningSpinner"
+        android:layout_below="@+id/listeningSpinner"
+        android:layout_marginTop="13dp"
+        android:animationResolution="@android:integer/config_longAnimTime"
+        android:progress="0"
+        android:scaleY="1" />
+
+    <TextView
+        android:id="@+id/langInLabelText"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/langOutLabel"
+        android:layout_alignLeft="@+id/publisher_volume"
+        android:layout_alignRight="@+id/langOutLabel"
+        android:layout_alignStart="@+id/publisher_volume"
+        android:layout_below="@+id/publisher_volume"
+        android:layout_marginTop="18dp"
+        android:text="@string/listening_language"
+        android:textColor="@color/ws_background_white_clr"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/langOutLabelText"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/publisher_volume"
+        android:layout_alignStart="@+id/publisher_volume"
+        android:layout_below="@+id/microphoneButton"
+        android:layout_marginTop="14dp"
+        android:text="@string/spoken_language"
+        android:textColor="@color/ws_background_white_clr"
+        android:textSize="17sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/langOutLabel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/publisher_volume"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_toRightOf="@+id/langOutLabelText"
+        android:paddingLeft="@dimen/padding_8"
+        android:text=""
+        android:textColor="@color/ws_background_white_clr"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/nicknameLabel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:textColor="@color/ws_background_white_clr" />
+
+    <Spinner
+        android:id="@+id/listeningSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/publisher_volume"
+        android:layout_alignLeft="@+id/langInLabelText"
+        android:layout_alignRight="@+id/publisher_volume"
+        android:layout_alignStart="@+id/langInLabelText"
+        android:layout_below="@+id/langInLabelText"
+        android:layout_marginTop="13dp"
+        style="@style/spinner_style"
+        android:textColor="#4F4F4F" />
+
+    <TextView
+        android:id="@+id/microphoneStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/microphoneButton"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/ws_background_white_clr"
+        android:layout_marginTop="18dp"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:text="Muted" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="285dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/ws_background_red_clr"
+        android:text="@string/text_logout"
+        android:visibility="invisible"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/container_right_margin" />
+
+    <FrameLayout
+        android:id="@+id/spinnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ws_background_black_clr"
+        android:gravity="center">
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/spinnerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/ws_background_white_clr"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:text="Connecting ..." />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/appVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text=""
+        android:textColor="@color/ws_background_white_clr" />
+</RelativeLayout>
+

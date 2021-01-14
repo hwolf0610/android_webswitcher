@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ws_background_blue_clr">#23b0ed</color>
+    <color name="ws_background_red_clr">#e8262f</color>
+    <color name="ws_background_green_clr">#55dc71</color>
+    <color name="ws_background_white_clr">#fafafa</color>
+    <color name="ws_background_dark_blue_clr">#3995d6</color>
+    <color name="ws_background_black_clr">#272727</color>
+    <color name="ws_orange">#f78028</color>
+</resources>

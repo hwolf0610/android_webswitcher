@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Webswitcher Pro</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_settings_dialog">Permissions Required</string>
+    <string name="rationale_video_app">This app needs access to your camera and mic to make video calls</string>
+    <string name="rationale_ask_again">This app may not work correctly without the requested permissions. Open the app settings screen to modify app permissions.</string>
+
+    <string name="setting">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="text_camera">Camera</string>
+    <string name="text_mute">Mute</string>
+    <string name="text_exit">Exit</string>
+    <string name="microphone_text">Microphone</string>
+    <string name="logout_text">Logout</string>
+    <string name="webswitcher_text_title">Webswitcher</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_configure">ConfigureActivity</string>
+    <string name="text_logout">Logout</string>
+    <string name="text_incoming">Listening:</string>
+    <string name="text_outgoing">Spoken:</string>
+    <string name="listening_language">Choose your language:</string>
+    <string name="spoken_language">Spoken language:</string>
+    <string name="start_meeting">Start</string>
+    <string name="choose_a_nickname">Choose a Nickname</string>
+    <string name="nickname">Nickname:</string>
+
+    <string-array name="languages_array">
+        <item>EN</item>
+        <item>FR</item>
+        <item>ES</item>
+        <item>AR</item>
+    </string-array>
+</resources>

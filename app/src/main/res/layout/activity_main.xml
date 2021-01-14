@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/webswitcher_background"
+    tools:context="com.webswitcherPro.activity.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/webswitcherLogo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:src="@drawable/webs_white_orange" />
+
+    <EditText
+        android:id="@+id/tokenInput"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/ws_background_white_clr"
+        android:ems="13"
+        android:hint="Enter Your Token"
+        android:inputType="textPersonName"
+        android:paddingLeft="8dp"
+        />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/tokenInput"
+
+        android:layout_alignLeft="@+id/tokenInput"
+        android:layout_alignRight="@+id/tokenInput"
+        android:layout_alignStart="@+id/tokenInput"
+        android:layout_below="@+id/tokenInput"
+        android:layout_marginTop="15dp"
+        android:background="@color/ws_orange"
+        android:ems="15"
+        android:text="Login"
+        android:onClick="check_login"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/webswitcherBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:autoLink="web"
+        android:text="Webswitcher.com"
+        android:textColorLink="@color/ws_background_white_clr"
+        android:textColor="@color/ws_background_white_clr" />
+
+    <TextView
+        android:id="@+id/appVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text=""
+        android:textColor="@color/ws_background_white_clr" />
+</RelativeLayout>
+
